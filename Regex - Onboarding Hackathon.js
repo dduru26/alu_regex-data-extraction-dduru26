@@ -12,3 +12,8 @@ function extractPhoneNumbers(text) {
     const pattern = /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g;
     return text.match(pattern);
 }
+
+function extractCreditCards(text) {
+    const pattern = /\b(?:\d{4}[- ]?){3}\d{4}\b/g;
+    return text.match(pattern);
+}
