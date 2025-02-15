@@ -7,3 +7,8 @@ function extractUrls(text) {
     const pattern = /https?:\/\/(?:www\.)?\S+\.\S+/g;
     return text.match(pattern);
 }
+
+function extractPhoneNumbers(text) {
+    const pattern = /\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g;
+    return text.match(pattern);
+}
