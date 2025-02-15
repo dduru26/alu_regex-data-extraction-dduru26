@@ -37,6 +37,12 @@ function extractHashtags(text) {
     const pattern = /#\w+/g;
     return text.match(pattern) || [];
 }
+
+function extractCurrencyAmounts(text) {
+    const pattern = /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g;
+    return text.match(pattern) || [];
+}
+
 // Example usage
 const text = "Contact us at user@example.com or visit https://www.example.com. Call us at (123) 456-7890. Credit card: 1234 5678 9012 3456.";
 console.log("Emails:", extractEmails(text));
