@@ -44,8 +44,20 @@ function extractCurrencyAmounts(text) {
 }
 
 // Example usage
-const text = "Contact us at user@example.com or visit https://www.example.com. Call us at (123) 456-7890. Credit card: 1234 5678 9012 3456.";
+const text = `
+    Contact us at user@example.com or visit https://www.example.com. 
+    Call us at (123) 456-7890 or 123-456-7890. 
+    Credit card: 1234 5678 9012 3456. 
+    Meeting at 14:30 or 2:30 PM. 
+    Visit <a href="https://example.com">our website</a> and follow #RegexTips. 
+    Price: $19.99, $1,234.56.
+`;
+
 console.log("Emails:", extractEmails(text));
 console.log("URLs:", extractUrls(text));
 console.log("Phone Numbers:", extractPhoneNumbers(text));
 console.log("Credit Cards:", extractCreditCards(text));
+console.log("Times:", extractTime(text));
+console.log("HTML Tags:", extractHtmlTags(text));
+console.log("Hashtags:", extractHashtags(text));
+console.log("Currency Amounts:", extractCurrencyAmounts(text));
