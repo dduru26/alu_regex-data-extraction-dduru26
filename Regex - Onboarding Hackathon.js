@@ -28,6 +28,11 @@ function extractTime(text) {
     return [...times24, ...times12];
 }
 
+function extractHtmlTags(text) {
+    const pattern = /<[^>]+>/g;
+    return text.match(pattern) || [];
+}
+
 // Example usage
 const text = "Contact us at user@example.com or visit https://www.example.com. Call us at (123) 456-7890. Credit card: 1234 5678 9012 3456.";
 console.log("Emails:", extractEmails(text));
